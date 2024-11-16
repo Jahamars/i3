@@ -33,3 +33,8 @@ ranger
 #linux-headers-amd64
 #firmware-misc-nonfree
 #nvidia-tesla-470-driver
+
+## from deb pkg
+#min
+#multimc
+#... 
