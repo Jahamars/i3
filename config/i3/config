@@ -77,20 +77,20 @@ bindsym $super+z focus mode_toggle
 # switch to workspace
 bindsym $super+Control+Right workspace next
 bindsym $super+Control+Left workspace prev
-bindsym $alt+1 workspace 1
-bindsym $alt+2 workspace 2
-bindsym $alt+3 workspace 3
-bindsym $alt+4 workspace 4
-bindsym $alt+5 workspace 5
-bindsym $alt+6 workspace 6
+bindsym $alt+1 workspace 󰇊
+bindsym $alt+2 workspace 󰇋
+bindsym $alt+3 workspace 󰇌
+bindsym $alt+4 workspace 󰇍
+bindsym $alt+5 workspace 󰇎
+bindsym $alt+6 workspace 󰇏
 
 # move focused container to workspace
-bindsym $super+Shift+1 move container to workspace 1
-bindsym $super+Shift+2 move container to workspace 2
-bindsym $super+Shift+3 move container to workspace 3
-bindsym $super+Shift+4 move container to workspace 4
-bindsym $super+Shift+5 move container to workspace 5
-bindsym $super+Shift+6 move container to workspace 6
+bindsym $super+Shift+1 move container to workspace 󰇊
+bindsym $super+Shift+2 move container to workspace 󰇋
+bindsym $super+Shift+3 move container to workspace 󰇌
+bindsym $super+Shift+4 move container to workspace 󰇍
+bindsym $super+Shift+5 move container to workspace 󰇎
+bindsym $super+Shift+6 move container to workspace 󰇏
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+BackSpace exec "i3-msg restart"
