@@ -13,8 +13,9 @@ font pango:Ionicons 9, Poppins Regular 9
 # use mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
 
-# autostart
-exec --no-startup-id hsetroot -center ~/.wallpaper.png
+# wallpaper 
+exec --no-startup-id nitrogen --set-tiled photo/back.png
+#exec --no-startup-id hsetroot -tile ~/photo/back.png
 
 # start dmenu (a program launcher)
 bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
@@ -121,18 +122,23 @@ client.background          #282828
 # window rules, you can find the window class using xprop
 for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] floating enable
 for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] focus
-for_window [class=".*"] border pixel 2.5
-hide_edge_borders smart
+for_window [class=".*"] border pixel 3
+# hide_edge_borders smart
+hide_edge_borders none
 gaps inner 4
-smart_gaps on
+gaps outer 3
+
+#smart_gaps on
 
 
 #clipboar
 exec --no-startup-id xfce4-clipman
 bindsym $super+Shift+v exec xfce4-popup-clipman
 bindsym $super+Shift+w exec /usr/bin/flameshot gui
+
 # bar
 exec --no-startup-id xfce4-panel
+#exec --no-startup-id polybar
 
 #keyboard layaut 
 bindsym $super+Shift+space exec setxkbmap us
@@ -140,4 +146,5 @@ bindsym $super+space exec setxkbmap ru
 
 #звук 
 exec --no-startup-id pulseaudio --start 
+
 
