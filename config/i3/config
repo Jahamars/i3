@@ -60,9 +60,13 @@ bindsym $super+l focus right
 
 # move focused window
 bindsym $super+Shift+Left move left
+bindsym $super+Shift+j move left
 bindsym $super+Shift+Down move down
+bindsym $super+Shift+k move down
 bindsym $super+Shift+Up move up
+bindsym $super+Shift+i move up
 bindsym $super+Shift+Right move right
+bindsym $super+Shift+l move right
 
 # split in horizontal or vertical orientation
 bindsym $super+h split h
