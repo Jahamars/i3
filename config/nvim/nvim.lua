@@ -43,16 +43,16 @@ vim.opt.termguicolors = true
 vim.cmd([[
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
 Plug 'preservim/vim-markdown'
 Plug 'numToStr/Comment.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'mg979/vim-visual-multi'
 call plug#end()
 ]])
 
+-- Plug 'nvim-telescope/telescope.nvim'
+-- Plug 'nvim-lua/plenary.nvim'
+-- Plug 'hrsh7th/nvim-cmp'
+-- Plug 'hrsh7th/cmp-buffer'
 
 vim.cmd("syntax enable")        -- Включение подсветки синтаксиса
 vim.cmd("set background=dark") -- Или 'light', если нужно
@@ -64,20 +64,20 @@ vim.api.nvim_set_keymap('v', '<Tab>', '>gv', { noremap = true, silent = true })
 -- Визуальный режим: Shift-Tab для сдвига влево
 vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
 
--- Настройка nvim-cmp
-local cmp = require'cmp'
-
-cmp.setup({
-  sources = {
-    { name = 'buffer' }, -- Предлагает завершение из текущего буфера
-  },
-  mapping = {
-    ['<C-n>'] = cmp.mapping.select_next_item(), -- Перебор вниз
-    ['<C-p>'] = cmp.mapping.select_prev_item(), -- Перебор вверх
-    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Выбор завершения
-  },
-})
-
+-- -- Настройка nvim-cmp
+-- local cmp = require'cmp'
+-- 
+-- cmp.setup({
+  -- sources = {
+    -- { name = 'buffer' }, -- Предлагает завершение из текущего буфера
+  -- },
+  -- mapping = {
+    -- ['<C-n>'] = cmp.mapping.select_next_item(), -- Перебор вниз
+    -- ['<C-p>'] = cmp.mapping.select_prev_item(), -- Перебор вверх
+    -- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Выбор завершения
+  -- },
+-- })
+-- 
 
 vim.keymap.set('n', 'd', '"_d', { noremap = true })
 vim.keymap.set('n', 'dd', '"_dd', { noremap = true })
@@ -110,18 +110,19 @@ vim.api.nvim_create_autocmd("VimEnter", {
         "				┏┳┓┓┏┓┓┏┳┓┏┓┃┓┏┏┳┓",
         "				┛┗┗┗┛┗┗┛┗┗┗┻┗┗┛┛┗┗",
         "",
-	"				[e] New File ",
-        "  				[f] Search ",
-        "  				[r] Recent files",
+		"				[e] New File ",
         "  				[q] Quit ",
       }
       vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
 
       -- Настраиваем команды для кнопок
       vim.api.nvim_buf_set_keymap(0, "n", "e", ":ene <BAR> startinsert<CR>", { noremap = true, silent = true })
-      vim.api.nvim_buf_set_keymap(0, "n", "f", ":Telescope find_files<CR>", { noremap = true, silent = true })
       vim.api.nvim_buf_set_keymap(0, "n", "q", ":qa<CR>", { noremap = true, silent = true })
-      vim.api.nvim_buf_set_keymap(0, "n", "r", ":Telescope oldfiles<CR>", { noremap = true, silent = true })
     end
   end,
 })
+
+      -- vim.api.nvim_buf_set_keymap(0, "n", "f", ":Telescope find_files<CR>", { noremap = true, silent = true })
+      -- vim.api.nvim_buf_set_keymap(0, "n", "r", ":Telescope oldfiles<CR>", { noremap = true, silent = true })
+        -- "  				[r] Recent files",
+        -- "  				[f] Search ",
