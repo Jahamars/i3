@@ -42,6 +42,7 @@ vim.opt.termguicolors = true
 -- или для совместимости с vim-plug
 vim.cmd([[
 call plug#begin('~/.vim/plugged')
+
 Plug 'morhetz/gruvbox'
 Plug 'preservim/vim-markdown'
 Plug 'numToStr/Comment.nvim'
@@ -106,11 +107,35 @@ vim.api.nvim_create_autocmd("VimEnter", {
       	"", 
       	"", 
       	"", 
-        "				   •  •     ┓•    ",
-        "				┏┳┓┓┏┓┓┏┳┓┏┓┃┓┏┏┳┓",
-        "				┛┗┗┗┛┗┗┛┗┗┗┻┗┗┛┛┗┗",
         "",
-		"				[e] New File ",
+        -- "				   •  •     ┓•    ",
+        -- "				┏┳┓┓┏┓┓┏┳┓┏┓┃┓┏┏┳┓",
+        -- "				┛┗┗┗┛┗┗┛┗┗┗┻┗┗┛┛┗┗",
+----------------------------------------------------------
+        "				 •",
+        "				┓┏┓┏┳┓",
+        "				┗┛┗┛┗┗",
+
+----------------------------------------------------------
+
+                                     
+                                     
+                                     
+-- "			             t                        ",
+-- "			             Ej             ..       :",
+-- "			 t      .DD. E#,           ,W,     .Et",
+-- "			 EK:   ,WK.  E#t          t##,    ,W#t",
+-- "			 E#t  i#D    E#t         L###,   j###t",
+-- "			 E#t j#f     E#t       .E#j##,  G#fE#t",
+-- "			 E#tL#i      E#t      ;WW; ##,:K#i E#t",
+-- "			 E#WW,       E#t     j#E.  ##f#W,  E#t",
+-- "			 E#K:        E#t   .D#L    ###K:   E#t",
+-- "			 ED.         E#t  :K#t     ##D.    E#t",
+-- "			 t           E#t  ...      #G      .. ",
+-- "			              ,;.          j          ",
+
+        -- "",
+        "				[e] New File ",
         "  				[q] Quit ",
       }
       vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
@@ -126,3 +151,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
       -- vim.api.nvim_buf_set_keymap(0, "n", "r", ":Telescope oldfiles<CR>", { noremap = true, silent = true })
         -- "  				[r] Recent files",
         -- "  				[f] Search ",
+
