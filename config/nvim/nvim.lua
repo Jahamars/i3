@@ -1,5 +1,3 @@
-напиши мне этот конфиг настроивая для дебиан неовим 0.7
-
 -- Настройки интерфейса
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
