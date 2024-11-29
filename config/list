@@ -4,20 +4,24 @@ openjdk-17-jdk
 cava
 xpdf
 fzf
-libgtkmm-3.0-dev
+# libgtkmm-4.0 if you dev
 slick-greeter
 lightdm-gtk-greater-settings
 flaneshot
 xfce4-appfinder
-alsa-utils pelseaudio pavucontrol
-xfce4-xkb-plugin
-xfce4-systemload-plugin
-xfce4-genmon-plugin
-xfce4-panel
-picom i3
-hsetroot
+alsa-utils 
+pelseaudio 
+pavucontrol
+#xfce4-xkb-plugin
+#xfce4-systemload-plugin
+#xfce4-genmon-plugin
+#xfce4-panel
+picom 
+i3
 lxappearance
 xarchiver
+nitrogen
+copyq
 sudo
 kazam
 smplayer 
@@ -32,6 +36,7 @@ ncdu
 thunar
 btop 
 ranger
+nvim
 ## only for GeForce GTX 650
 #linux-headers-amd64
 #firmware-misc-nonfree
