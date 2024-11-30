@@ -1,21 +1,14 @@
 feh
-neovim
-openjdk-17-jdk
+#openjdk-17-jdk if you play minecraft
 cava
 xpdf
 fzf
 # libgtkmm-4.0 if you dev
-slick-greeter
-lightdm-gtk-greater-settings
 flaneshot
 xfce4-appfinder
 alsa-utils 
 pelseaudio 
 pavucontrol
-#xfce4-xkb-plugin
-#xfce4-systemload-plugin
-#xfce4-genmon-plugin
-#xfce4-panel
 picom 
 i3
 lxappearance
@@ -26,23 +19,18 @@ sudo
 kazam
 smplayer 
 xorg
-lightdm
 git
-micro 
 zsh
 kitty
-wget
 ncdu
 thunar
 btop 
 ranger
-nvim
 ## only for GeForce GTX 650
 #linux-headers-amd64
 #firmware-misc-nonfree
 #nvidia-tesla-470-driver
-
-## from deb pkg
 #min
-#multimc
-#... 
+#multimc 
+#from curl 
+# homebrew if you wont lastest neovim version
