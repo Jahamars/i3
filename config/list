@@ -1,3 +1,4 @@
+# packages after installing Debian Minimal
 network-manager
 feh
 #openjdk-17-jdk if you play minecraft
@@ -35,5 +36,7 @@ ranger
 #firmware-misc-nonfree
 #nvidia-tesla-470-driver
 #########################
-#multimc or lagacy
-#homebrew if you wont lastest neovim version
+# BigBlueTermPlus Nerd Font
+# multimc or lagacy
+# homebrew if you wont lastest neovim version
+# Gruvbox Plus Icons 
