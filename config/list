@@ -1,10 +1,14 @@
+network-manager
 feh
 #openjdk-17-jdk if you play minecraft
 cava
 xpdf
 fzf
+polybar
+lightdm
+lightdm-settings
 # libgtkmm-4.0 if you dev
-flaneshot
+flameshot
 xfce4-appfinder
 alsa-utils 
 pelseaudio 
@@ -30,7 +34,6 @@ ranger
 #linux-headers-amd64
 #firmware-misc-nonfree
 #nvidia-tesla-470-driver
-#min
-#multimc 
-#from curl 
-# homebrew if you wont lastest neovim version
+#########################
+#multimc or lagacy
+#homebrew if you wont lastest neovim version
