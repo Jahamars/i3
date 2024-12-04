@@ -5,28 +5,27 @@ set $alt Mod1
 #picom 
 exec --no-startup-id picom -b
 
-
-
 # set font
-font pango:Ionicons 9, Poppins Regular 9
+font pango:BigBlueTermPlus Nerd Font 10
 
 # use mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
 
 # wallpaper 
-exec --no-startup-id nitrogen --set-zoom-fill ~/.lock.png 
+exec --no-startup-id nitrogen --set-zoom-fill ~/wallpaper.png
 # exec --no-startup-id nitrogen --set-zoom-fill ~/photo/wall.jpg
 # exec --no-startup-id nitrogen --set-tiled photo/back.png
 #exec --no-startup-id hsetroot -tile ~/photo/back.png
 
 # start dmenu (a program launcher)
-bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
--fn 'Poppins:size=9' -nb '#141c21' -nf '#93a1a1' \
+# bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
+# -fn 'Poppins:size=9' -nb '#141c21' -nf '#93a1a1' \
 
 
 
 # start a terminal
 bindsym $super+t exec kitty
+
 
 # start dmenu (a program launcher)
 bindsym $super+o exec xfce4-appfinder
@@ -37,6 +36,8 @@ bindsym $super+p exec i3lock -c 000000
 bindsym $super+b exec min
 bindsym $super+f exec thunar
 bindsym $super+u exec /home/user/EasyGamma/./EasyGamma
+bindsym $super+Shift+n exec kitty -- nmtui
+
 
 # change volume and brightness
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
@@ -91,20 +92,20 @@ bindsym $super+e floating toggle
 # switch to workspace
 bindsym $super+Control+Right workspace next
 bindsym $super+Control+Left workspace prev
-bindsym $alt+1 workspace 󰇊
-bindsym $alt+2 workspace 󰇋
-bindsym $alt+3 workspace 󰇌
-bindsym $alt+4 workspace 󰇍
-bindsym $alt+5 workspace 󰇎
-bindsym $alt+6 workspace 󰇏
+bindsym $alt+1 workspace 1
+bindsym $alt+2 workspace 2
+bindsym $alt+3 workspace 3
+bindsym $alt+4 workspace 4
+bindsym $alt+5 workspace 5
+bindsym $alt+6 workspace 6
 
 # move focused container to workspace
-bindsym $super+Shift+1 move container to workspace 󰇊
-bindsym $super+Shift+2 move container to workspace 󰇋
-bindsym $super+Shift+3 move container to workspace 󰇌
-bindsym $super+Shift+4 move container to workspace 󰇍
-bindsym $super+Shift+5 move container to workspace 󰇎
-bindsym $super+Shift+6 move container to workspace 󰇏
+bindsym $super+Shift+1 move container to workspace 1
+bindsym $super+Shift+2 move container to workspace 2
+bindsym $super+Shift+3 move container to workspace 3
+bindsym $super+Shift+4 move container to workspace 4
+bindsym $super+Shift+5 move container to workspace 5
+bindsym $super+Shift+6 move container to workspace 6
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+BackSpace exec "i3-msg restart"
@@ -143,21 +144,21 @@ client.background          #282828
 # window rules, you can find the window class using xprop
 for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] floating enable
 for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] focus
-for_window [class=".*"] border pixel 3
+# for_window [class=".*"] border pixel 2.5
+for_window [class=".*"] border pixel 2.5
 # hide_edge_borders smart
 hide_edge_borders none
 gaps inner 4
 gaps outer 3
+gaps top 35px
 
 #smart_gaps on
-
 exec --no-startup-id copyq
 
 # #clipboar
 # exec --no-startup-id xfce4-clipman
 bindsym $super+Shift+v exec copyq menu
 # bindsym $super+Shift+v exec xfce4-popup-clipman
-
 
 
 bindsym $super+Shift+w exec /usr/bin/flameshot gui
@@ -170,10 +171,13 @@ exec --no-startup-id polybar
 # bindsym $super+Shift+space exec setxkbmap us
 # bindsym $super+space exec setxkbmap ru
 
-exec --no-startup-id setxkbmap -layout us,ru      
-exec --no-startup-id setxkbmap -option "grp:win_space_toggle"       
+
+
+exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle
 
 #звук 
 exec --no-startup-id pulseaudio --start 
+
+
 
 
