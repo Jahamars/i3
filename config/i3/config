@@ -12,8 +12,8 @@ font pango:BigBlueTermPlus Nerd Font 10
 floating_modifier $super
 
 # wallpaper 
-exec --no-startup-id nitrogen --set-zoom-fill ~/wallpaper.png
-# exec --no-startup-id nitrogen --set-zoom-fill ~/photo/wall.jpg
+# exec --no-startup-id nitrogen --set-zoom-fill ~/.config/#83a598.png
+exec --no-startup-id nitrogen --set-zoom-fill ~/photo/wall.jpg
 # exec --no-startup-id nitrogen --set-tiled photo/back.png
 #exec --no-startup-id hsetroot -tile ~/photo/back.png
 
@@ -31,20 +31,26 @@ bindsym $super+t exec kitty
 bindsym $super+o exec xfce4-appfinder
 
 # common apps keybinds
-bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'xdg-open ~/$f'
-bindsym $super+p exec i3lock -c 000000  
-bindsym $super+b exec min
+# bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'xdg-open ~/$f'
+# bindsym $super+p exec i3lock -c 000000  
+bindsym $super+b exec chromium
 bindsym $super+f exec thunar
-bindsym $super+u exec /home/user/EasyGamma/./EasyGamma
-bindsym $super+Shift+n exec kitty -- nmtui
+bindsym $super+n exec ~/apps/./Obsidian-1.7.7.AppImage
 
+
+bindsym $super+u exec ~/EasyGamma/bb
+bindsym $super+m exec chromium --app=https://music.youtube.com
+
+
+# # Горячая клавиша для запуска программы и позиционирования окна
+# bindsym $super+u exec --no-startup-id /home/user/EasyGamma/dd 
 
 # change volume and brightness
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
 bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+# bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+# bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # kill focused window
 bindsym $super+x kill
@@ -111,12 +117,14 @@ bindsym $super+Shift+6 move container to workspace 6
 bindsym $super+BackSpace exec "i3-msg restart"
 
 # exit i3
-bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' \
--b 'Yes' 'i3-msg exit'"
+# bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' \
+# -b 'Yes' 'i3-msg exit'"
 
-bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really poweroff ?' \
--b 'Yes' 'systemctl poweroff'"
+# bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really poweroff ?' \
+# -b 'Yes' 'systemctl poweroff'"
 
+
+bindsym $super+Shift+q exec kitty -e ~/sys.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -150,7 +158,7 @@ for_window [class=".*"] border pixel 2.5
 hide_edge_borders none
 gaps inner 4
 gaps outer 3
-gaps top 35px
+gaps top 31px
 
 #smart_gaps on
 exec --no-startup-id copyq
@@ -165,6 +173,11 @@ bindsym $super+Shift+w exec /usr/bin/flameshot gui
 
 # bar
 # exec --no-startup-id xfce4-panel
+
+# bar {
+#     status_command i3status
+# }
+# exec --no-startup-id i3status 
 exec --no-startup-id polybar
 
 # #keyboard layaut
