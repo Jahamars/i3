@@ -26,19 +26,20 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='white'
 POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='235'
 POWERLEVEL9K_NVM_BACKGROUND="235"
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="#D8DEE9"  # Snow Storm
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="#BF616A"  # Aurora Red
+# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="#83a598"  
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="#98971a"  
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="#BF616A"  
 POWERLEVEL9K_TIME_BACKGROUND='235'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='235'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='white'
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 POWERLEVEL9K_DIR_BACKGROUND='235'
-POWERLEVEL9K_DIR_FOREGROUND="#E5E9F0"  # Snow Storm
+# POWERLEVEL9K_DIR_FOREGROUND="#83a598"  
+POWERLEVEL9K_DIR_FOREGROUND="#98971a"  
 
 
 # Плагины 
-plugins=(
-)
+plugins=(zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -79,7 +80,7 @@ compile_and_run_cpp() {
 alias cpp='compile_and_run_cpp'
 mkcpp() {
     if [[ $1 == *.cpp ]]; then
-        echo -e "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Your code here\n    return 0;\n}" > "$1" && micro "$1"
+        echo -e "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Your code here\n    return 0;\n}" > "$1" && nvim "$1"
     else
         echo "Error: The file must have a .cpp extension"
     fi
@@ -87,16 +88,17 @@ mkcpp() {
 ############################################
 
 
-alias sshr='sudo systemctl restart sshd'
-alias sshs='sudo systemctl stop sshd'
-alias sshh='sudo systemctl status sshd'
-alias sysend='rsync -avz --progress /home/mars/Documents/Obsidian user@ip:/home/mars/Документы'
-alias syget='rsync -avz --progress /home/mars/Documents/Obsidian user@ip:/home/mars/Документы'
+alias sshr='sudo systemctl restart ssh'
+alias sshs='sudo systemctl stop ssh'
+alias sshh='sudo systemctl status ssh'
 alias wip="ip -4 addr show dev wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias py='python3'
 alias cdcpp='cd ~/all/cpp'
 alias cdpy='cd ~/all/py'
 alias cdbash='cd ~/all/bash'
+alias nvim='~/apps/./nvim.appimage'
 
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH=$PATH:/home/user/.spicetify
