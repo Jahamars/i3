@@ -38,6 +38,7 @@ python3.11-venv
 trayer
 chromium
 dmenu
+gh
 ## only for GeForce GTX 650
 #linux-headers-amd64
 #firmware-misc-nonfree
